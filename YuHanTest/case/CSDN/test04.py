@@ -18,5 +18,3 @@ class Test(unittest.TestCase):
         self.log.info('获取是否登录成功：%s'%result['success'])
         self.log.info(result['success'],True)
         self.log.info('----end-----')
-if __name__ == '__main__':
-    unittest.main()
