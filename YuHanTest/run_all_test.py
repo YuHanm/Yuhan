@@ -30,7 +30,7 @@ def get_daytime():
     return time.strftime(Day, time.localtime(time.time()))
 
 def create_report(Daily_path):#报告路径
-    filename = Daily_path + '\\' + get_time() + '.html'
+    filename = Daily_path + '/' + get_time() + '.html'
     fp = open(filename, 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='测试报告', description='用例执行情况')
     runner.run(all_case())
