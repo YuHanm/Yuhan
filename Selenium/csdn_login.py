@@ -17,7 +17,6 @@ ActionChains(driver).move_to_element(blogs).perform()
 time.sleep(4)
 #获取当前窗口句柄
 
-
 #点击博客
 driver.find_element_by_css_selector('.toolbar_to_feed').click()
 
