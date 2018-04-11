@@ -7,8 +7,8 @@ class Test(unittest.TestCase):
           "platformName": "Android",
           "deviceName": "M3LDU15902004692",
           "platformVersion": "4.4.2",
-          "appPackage": "com.philliphsu.clock2.debug",
-          "appActivity": "com.philliphsu.clock2.MainActivity"
+          "appPackage": "mobi.clock.android",
+          "appActivity": "com.philliphsu.clock2.startup.StartupPageActivity"
         }
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub',caps)
 #点击创建闹钟
