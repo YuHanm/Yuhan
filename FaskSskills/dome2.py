@@ -22,4 +22,4 @@ def index():
 
     return render_template('index.html', form=nameForm, name=session.get('name'))
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,threaded=True)

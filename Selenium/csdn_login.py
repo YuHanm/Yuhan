@@ -6,6 +6,7 @@ driver = webdriver.Chrome()
 
 driver.maximize_window()
 driver.get('https://passport.csdn.net/account/login')
+print("-------开始登陆-------")
 time.sleep(5)
 driver.find_element_by_css_selector('#username').send_keys('1138941694@qq.com')
 driver.find_element_by_css_selector('.pass-word').send_keys('521125')
@@ -28,3 +29,4 @@ all_h = driver.window_handles
 print(all_h)
 driver.switch_to.window(all_h[0])
 print(driver.title)
+print("------登陆成功-----")

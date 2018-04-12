@@ -12,7 +12,7 @@ except:
         from HTMLTestRunner.python3 import HTMLTestRunner
 
 def all_case():
-    cur_path = './case/'
+    cur_path = './Case/'
     testcase = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(cur_path, pattern='test*.py', top_level_dir=None)
     for test_suite in discover:
