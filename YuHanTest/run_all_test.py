@@ -2,7 +2,7 @@
 import unittest
 import time
 import os
-from config import ReadConfig
+from YuHanTest.config import ReadConfig
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
