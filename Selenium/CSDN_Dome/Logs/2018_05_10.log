@@ -1,0 +1,4 @@
+[2018-05-10 16:25:39,702]-[logger.py]-INFO:页面正常打开:https://passport.csdn.net/account/login
+[2018-05-10 16:25:53,868]-[logger.py]-INFO:登陆后首页：CSDN-专业IT技术社区
+[2018-05-10 16:30:00,752]-[logger.py]-INFO:页面正常打开:https://passport.csdn.net/account/login
+[2018-05-10 16:30:15,025]-[logger.py]-INFO:登陆后首页：CSDN-专业IT技术社区

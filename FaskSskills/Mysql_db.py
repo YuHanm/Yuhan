@@ -12,7 +12,7 @@ try:
    # 提交到数据库执行
    db.commit()
 except:
-   # Rollback in Case there is any error
+   # Rollback in Case1 there is any error
    db.rollback()
 
 

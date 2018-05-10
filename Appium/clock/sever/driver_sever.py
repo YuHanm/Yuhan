@@ -1,5 +1,5 @@
 from appium import webdriver
-from clock.po.operate import CreatPage
+from ..po.operate import CreatPage
 import unittest
 class Test(unittest.TestCase):
     def setUp(self):

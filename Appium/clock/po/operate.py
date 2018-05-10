@@ -1,4 +1,4 @@
-from clock.po import Reset_element
+from ..po import Reset_element
 
 class CreatPage(Reset_element.Reset):
     found_clock =('com.philliphsu.clock2.debug:id/fab')

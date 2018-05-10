@@ -101,12 +101,12 @@ from xml.sax import saxutils
 # ------------------------------------------------------------------------
 # The redirectors below are used to capture output during testing. Output
 # sent to sys.stdout and sys.stderr are automatically captured. However
-# in some cases sys.stdout is already cached before HTMLTestRunner is
+# in some cases sys.stdout is already cached before TestRunner is
 # invoked (e.g. calling logging.basicConfig). In order to capture those
 # output, use the redirectors for the cached stream.
 #
 # e.g.
-#   >>> logging.basicConfig(stream=HTMLTestRunner.stdout_redirector)
+#   >>> logging.basicConfig(stream=TestRunner.stdout_redirector)
 #   >>>
 
 class OutputRedirector(object):
@@ -429,7 +429,7 @@ a.popup_link:hover {
 <col align='right' />
 </colgroup>
 <tr id='header_row'>
-    <td>Test Group/Test Case</td>
+    <td>Test Group/Test Case1</td>
     <td>Count</td>
     <td>Pass</td>
     <td>Fail</td>
@@ -623,7 +623,7 @@ class HTMLTestRunner(Template_mixin):
 
 
     def run(self, test):
-        "Run the given test Case or test suite."
+        "Run the given test Case1 or test suite."
         result = _TestResult(self.verbosity)
         test(result)
         self.stopTime = datetime.datetime.now()
@@ -671,7 +671,7 @@ class HTMLTestRunner(Template_mixin):
 
     def generateReport(self, test, result):
         report_attrs = self.getReportAttributes(result)
-        generator = 'HTMLTestRunner %s' % __version__
+        generator = 'TestRunner %s' % __version__
         stylesheet = self._generate_stylesheet()
         heading = self._generate_heading(report_attrs)
         report = self._generate_report(result)
@@ -809,9 +809,9 @@ class TestProgram(unittest.TestProgram):
     class for command line parameters.
     """
     def runTests(self):
-        # Pick HTMLTestRunner as the default test runner.
+        # Pick TestRunner as the default test runner.
         # base class's testRunner parameter is not useful because it means
-        # we have to instantiate HTMLTestRunner before we know self.verbosity.
+        # we have to instantiate TestRunner before we know self.verbosity.
         if self.testRunner is None:
             self.testRunner = HTMLTestRunner(verbosity=self.verbosity)
         unittest.TestProgram.runTests(self)

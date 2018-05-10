@@ -1,0 +1,8 @@
+login:
+    #css
+    账号 : "#username"
+    密码 : .pass-word
+    #id
+    登陆按钮 : logging
+    #xpaht
+    切换 : /html/body/div[3]/div/div/div[2]/div/h3/a

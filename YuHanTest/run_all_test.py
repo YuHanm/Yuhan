@@ -2,7 +2,7 @@
 import unittest
 import time
 import os
-from config import ReadConfig
+from YuHanTest.config import ReadConfig
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
@@ -55,6 +55,7 @@ def get_report_file(Daily_path):
     list.sort(key=lambda fn: os.path.getmtime(os.path.join(report_path, fn)))
     print('最近一次的测试报告：  '+list[-1])
     report_file = os.path.join(report_path,list[-1])
+    print(report_file)
     return report_file
 
 def send_mail(sender, psw, receiver, smtpserver, report_file, port):
@@ -97,4 +98,4 @@ if __name__ == '__main__':
     # 获取报告路径
     report_file = get_report_file(Daily_path)
     # 发送报告
-    send_mail(sender,psw,receiver,smtp_server, report_file,port)
+   #send_mail(sender,psw,receiver,smtp_server, report_file,port)
